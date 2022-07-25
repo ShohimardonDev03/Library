@@ -1,4 +1,4 @@
-package uz.jl.library.utils;
+package uz.jl.library.domains;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 import uz.jl.library.config.Encoder;
 import uz.jl.library.domains.User;
 import uz.jl.library.enums.UserRole;
+
+import java.time.LocalDate;
 
 @Data
 @AllArgsConstructor
@@ -20,6 +22,8 @@ public class SessionUser {
     private UserRole role;
     private String password;
     private Integer age;
+    private String macAddress;
+    private LocalDate loginDate;
     Encoder encoder = Encoder.instance;
 
     public SessionUser(User user, boolean b) {
